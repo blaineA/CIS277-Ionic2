@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { TournamentsPage } from '../pages/pages';
-import { TeamDetailPage } from '../pages/pages';
+import { TournamentsPage } from '../pages';
+import { TeamDetailPage } from '../pages';
 /*
   Generated class for the Teams page.
 
@@ -14,13 +14,20 @@ import { TeamDetailPage } from '../pages/pages';
 })
 export class TeamsPage {
 
+  teams = [
+          { id: 1, name: 'HC Elite' },
+          { id: 2, name: 'Team Takeover' },
+          { id: 3, name: 'DC Thunder' }
+      ];
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   goToTournaments(){
     this.navCtrl.push(TournamentsPage);
   }
 
-  itemTapped(){
+  itemTapped($event, team){
     this.navCtrl.push(TeamDetailPage);
   }
 

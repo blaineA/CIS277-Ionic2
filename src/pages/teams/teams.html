@@ -16,6 +16,8 @@
 <ion-content padding>
   <p> This is a paragraph </p>
   <button ion-button (click)="goToTournaments()"> Find a Tournament </button>
-  <button ion-button (click)="itemTapped()"> HC Elite</button>
+  <button ion-item *ngFor="let team of teams" (click)="itemTapped($event, team)">
+    {{team.name}}
+  </button>
   <button ion-button (click)="itemTapped()"> Team Takeover </button>
 </ion-content>
