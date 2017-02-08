@@ -12,6 +12,9 @@ import { TeamHomePage } from '../pages';
   selector: 'page-teams',
   templateUrl: 'teams.html'
 })
+
+
+
 export class TeamsPage {
 
   teams = [
